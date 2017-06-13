@@ -55,36 +55,23 @@
 
 
 <script type="text/ng-template" id="comment.html">
-<center><h3>Replies</h3></center>
-<br>
-<center><a href = "#forum"><button class="btn btn-danger">Back</button></a></center>
-<br><br>
-<center><h4><q>{{comments[repon].mess}}</q></h4></center>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+this.page.url = 'https://3awpf.github.io/wpf-web/Forum.html#';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 'forum1111'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://world-power-fighter.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-	<form class="horizontal" role="form">
-	<div class="form-group">
-		<label class="control-label col-xs-2" for="reply">Message:</label>
-		<div class="col-xs-10">
-			<input type="text" class="form-control" id="reply" placeholder="Type your message here" ng-model="mess">
-		</div>
-    </div>
-	<br><br>
-	 <center><button type="submit" class="btn btn-default" ng-click="makeReply()">Submit</button></center>
-    </div>
-	</form>
-	<br><br><br><br>
-	<table class="table table-condensed">
-		<thead>
-			<tr>
-				<th>Replies</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="x in reps">
-				<td>{{x}}</td>
-			</tr>
-		</tbody>
-	</table>
 </script>
 
 </body>
